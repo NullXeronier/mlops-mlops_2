@@ -39,8 +39,10 @@ jobs:
       run: |
         flake8 data-task/src data-task/core --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 data-task/src data-task/core --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Format with black
+      run: black data-task/
 
-    - name: Check code formatting with black
+    - name: Check formatting
       run: black --check data-task/
 
     - name: Check import order with isort
