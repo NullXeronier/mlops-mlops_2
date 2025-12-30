@@ -1,3 +1,15 @@
+<<<<<<< HEAD:Dockerfile
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+=======
 FROM python:3.10-slim
 
 WORKDIR /app
@@ -29,3 +41,4 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 # Run the application
 CMD ["python", "main.py"]
+>>>>>>> 496f697124b5783a90c7086e18f403263095036e:data-task/Dockerfile
