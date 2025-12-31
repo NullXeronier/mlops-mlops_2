@@ -55,7 +55,7 @@ jobs:
   build-and-push:
     needs: quality-check  # 위 검사가 통과해야만 실행됨
     runs-on: ubuntu-latest
-    if: github.event_name != 'schedule' # 스케줄 실행이 아닐 때만 빌드
+    if: github.event_name == 'push' 
 
     steps:
     - uses: actions/checkout@v4
